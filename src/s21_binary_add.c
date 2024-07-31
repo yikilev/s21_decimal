@@ -12,6 +12,7 @@ void set_decimal_bit(s21_decimal *value, int index) {
   }
 }
 
+
 s21_decimal s21_binary_add(s21_decimal value1, s21_decimal value2) {
   int perenos = 0;
   s21_decimal result;
@@ -61,7 +62,7 @@ int main() {
   s21_decimal chislo1, chislo2;
   s21_set_decimal_zero(&chislo1);
   s21_set_decimal_zero(&chislo2);
-  chislo1.bits[0] = 0xf1111118;
+  chislo1.bits[0] = 0x00000004;
   chislo2.bits[0] = 0xf0000008;
   chislo1.bits[1] = 0xf1111118;
   chislo2.bits[1] = 0xf0000008;

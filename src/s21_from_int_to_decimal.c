@@ -18,13 +18,13 @@ int s21_from_int_to_decimal(int src, s21_decimal *dst) {
     return code;
 }
 
-// int main() {
-//     int src = -12;
-//     s21_decimal dst;
-//     int code = s21_from_int_to_decimal(src,&dst);
-//     printf("Байт0: %u %x\n", dst.bits[0], dst.bits[0]);
-//     printf("Байт1: %u %x\n", dst.bits[1], dst.bits[1]);
-//     printf("Байт2: %u %x\n", dst.bits[2], dst.bits[2]);
-//     printf("Байт3: %u %x\n", dst.bits[3], dst.bits[3]);
-//     printf("Код: %d", code);
-// }
+int main() {
+    int src = -12;
+    s21_decimal dst;
+    int code = s21_from_int_to_decimal(src,&dst);
+    printf("Байт0: %u %x\n", dst.bits[0], dst.bits[0]);
+    printf("Байт1: %u %x\n", dst.bits[1], dst.bits[1]);
+    printf("Байт2: %u %x\n", dst.bits[2], dst.bits[2]);
+    printf("Байт3: %u %x\n", dst.bits[3], dst.bits[3]);
+    printf("Код: %d", code);
+}
