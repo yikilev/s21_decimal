@@ -43,7 +43,7 @@ void s21_set_decimal_zero(s21_decimal *value);
 #define s21_mask_first_bit 0x80000000
 #define s21_minus 0x80000000
 #define s21_scale 0x00ff0000
-
+#define bits_in_byte 32
 
 
 
