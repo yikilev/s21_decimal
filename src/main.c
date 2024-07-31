@@ -58,6 +58,21 @@ int main(){
         printf("Число %d: %x\n",x,a.bits[x]);
     }
     printf("Число корректное: %d\n",s21_decimal_is_correct(a));
-
+    printf("--------test_shift---------\n");
+    int shift = 0x10000000;
+    unsigned int shift2 = 0x80000000;
+    int shift_right = shift>>4;
+    int shift_left = shift<<3;
+    unsigned int shift_right2 = shift>>4;
+    unsigned int shift_left2 = shift<<4;
+    printf("shift_right: %d  %x \n", shift_right, shift_right);
+    printf(" shift_left: %d  %x \n", shift_left, shift_left);
+    printf("unsigned shift_right: %d  %x \n", shift_right2, shift_right2);
+    printf("unsigned shift_left: %d  %x \n", shift_left2, shift_left2);
+    printf(" int_min: %d  %x \n", INT32_MIN, INT32_MIN);
+    printf(" unsigned int_max: %d  %x \n", UINT32_MAX, UINT32_MAX);
+    int ff = -100;
+    printf("отрицательные числа в битах: %d  %x \n", ff, ff);
+    
     return 0;
 }
