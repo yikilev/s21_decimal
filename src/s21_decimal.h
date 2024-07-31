@@ -33,15 +33,24 @@ typedef enum s21_arithmetic_result {
     S21_ARITHMETIC_ERROR = 4
 } s21_arithmetic_result;
 
+typedef enum s21_conversion_result {
+    S21_CONVERSION_OK = 0,
+    S21_CONVERSION_ERROR = 1,
+} s21_conversion_result;
+
 
 int s21_get_sign(s21_decimal value);
 int s21_is_equal(s21_decimal value1, s21_decimal value2);
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 void s21_set_decimal_zero(s21_decimal *value);
+void s21_set_decimal_sign(s21_decimal * value, int sign);
+
+
 
 #define s21_mask_last_bit 0x00000001
 #define s21_mask_first_bit 0x80000000
 #define s21_minus 0x80000000
+#define s21_plus 0x7fffffff
 #define s21_scale 0x00ff0000
 #define bits_in_byte 32
 
