@@ -1,5 +1,6 @@
 CC = gcc
-FLAGS = -Wall -Werror -Wextra -std=c11
+FLAGS = -g
+# FLAGS = -Wall -Werror -Wextra -std=c11
 DIRS = s21_decimal
 
 s21_decimal : clean s21_decimal.h s21_decimal.c
