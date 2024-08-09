@@ -1,4 +1,4 @@
-#include "s21_decimal.h"
+#include "../s21_decimal.h"
 
 void s21_set_decimal_zero(s21_decimal *value) {
   for (int i = 0; i < 4; i++) {
@@ -16,7 +16,7 @@ void set_decimal_bit(s21_decimal *value, int index) {
 s21_decimal s21_binary_add(s21_decimal value1, s21_decimal value2) {
   int perenos = 0;
   s21_decimal result;
-  s21_set_decimal_zero(&result);  // устанавливает в ноль значение всех четырех bits
+  s21_set_decimal_zero(&result);
   for (int i = 0; i < 3; i++) {
     unsigned int temp_res = 0x00000000;
     unsigned int pervoe = value1.bits[i];
@@ -58,21 +58,21 @@ s21_decimal s21_binary_add(s21_decimal value1, s21_decimal value2) {
   return result;
 }
 
-int main() {
-  s21_decimal chislo1, chislo2;
-  s21_set_decimal_zero(&chislo1);
-  s21_set_decimal_zero(&chislo2);
-  chislo1.bits[0] = 0x00000004;
-  chislo2.bits[0] = 0xf0000008;
-  chislo1.bits[1] = 0xf1111118;
-  chislo2.bits[1] = 0xf0000008;
-  chislo1.bits[2] = 0xf1111118;
-  chislo2.bits[2] = 0xf0000008;
-  s21_decimal result = s21_binary_add(chislo1, chislo2);
-  printf("Результат: %u  %x\n", result.bits[0], result.bits[0]);
-  printf("Результат: %u  %x\n", result.bits[1], result.bits[1]);
-  printf("Результат: %u  %x\n", result.bits[2], result.bits[2]);
-  printf("Результат: %u  %x\n", result.bits[3], result.bits[3]);
+// int main() {
+//   s21_decimal chislo1, chislo2;
+//   s21_set_decimal_zero(&chislo1);
+//   s21_set_decimal_zero(&chislo2);
+//   chislo1.bits[0] = 0x00000004;
+//   chislo2.bits[0] = 0xf0000008;
+//   chislo1.bits[1] = 0xf1111118;
+//   chislo2.bits[1] = 0xf0000008;
+//   chislo1.bits[2] = 0xf1111118;
+//   chislo2.bits[2] = 0xf0000008;
+//   s21_decimal result = s21_binary_add(chislo1, chislo2);
+//   printf("Результат: %u  %x\n", result.bits[0], result.bits[0]);
+//   printf("Результат: %u  %x\n", result.bits[1], result.bits[1]);
+//   printf("Результат: %u  %x\n", result.bits[2], result.bits[2]);
+//   printf("Результат: %u  %x\n", result.bits[3], result.bits[3]);
 
-  return 0;
-}
+//   return 0;
+// }

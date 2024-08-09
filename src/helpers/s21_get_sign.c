@@ -1,4 +1,4 @@
-#include "s21_decimal.h"
+#include "../s21_decimal.h"
 
 int s21_get_sign(s21_decimal value) {
     int sign = 0;

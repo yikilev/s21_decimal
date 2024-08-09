@@ -10,7 +10,7 @@ typedef struct s21_decimal {
 } s21_decimal;
 
 typedef struct s21_big_decimal {
-    int bits[7];
+    int bits[8];
 } s21_big_decimal;
 
 
@@ -18,7 +18,7 @@ typedef union decimal_bit3{
     int i;
     struct {
         uint32_t empty2 : 16;
-        uint32_t power : 8;
+        uint32_t scale : 8;
         uint32_t empty1 : 7;
         uint32_t sign : 1;
     } parts;
@@ -38,6 +38,9 @@ typedef enum s21_conversion_result {
     S21_CONVERSION_ERROR = 1,
 } s21_conversion_result;
 
+typedef struct s21_decimal_256 {
+    s21_decimal decimals[2];
+} s21_decimal_256;
 
 int s21_get_sign(s21_decimal value);
 int s21_is_equal(s21_decimal value1, s21_decimal value2);
@@ -53,6 +56,7 @@ void s21_set_decimal_sign(s21_decimal * value, int sign);
 #define s21_plus 0x7fffffff
 #define s21_scale 0x00ff0000
 #define bits_in_byte 32
+#define max_bits 128
 
 
 

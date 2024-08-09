@@ -1,4 +1,4 @@
-#include "s21_decimal.h"
+#include "../s21_decimal.h"
 
 int s21_decimal_is_correct(s21_decimal value) {
     s21_arithmetic_result code = S21_ARITHMETIC_OK;
