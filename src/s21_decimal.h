@@ -47,8 +47,30 @@ int s21_is_equal(s21_decimal value1, s21_decimal value2);
 int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 void s21_set_decimal_zero(s21_decimal *value);
 void s21_set_decimal_sign(s21_decimal * value, int sign);
-
-
+int s21_from_int_to_decimal(int src, s21_decimal *dst);
+int s21_from_decimal_to_int(s21_decimal src, int *dst);
+int s21_bit_is_set(s21_decimal value, int index);
+s21_decimal s21_create_decimal_from_array(int bit0, int bit1, int bit2, int bit3);
+s21_decimal s21_create_decimal_from_data(int sign, int scale, int bit2, int bit1, int bit0);
+int s21_decimal_is_correct(s21_decimal value);
+int s21_decimal_is_even(s21_decimal value);
+int s21_get_decimal_non_zero_index(s21_decimal value);
+int s21_get_decimal_scale(s21_decimal value);
+s21_decimal s21_get_max_decimal(void);
+s21_decimal s21_get_max_int(void);
+s21_decimal s21_get_min_decimal(void);
+s21_decimal s21_decimal_get_int_min(void);
+int s21_get_sign(s21_decimal value);
+s21_decimal s21_get_zero_decimal(void);
+int s21_reset_int_bit(int value, int index);
+void set_decimal_bit(s21_decimal *value, int index);
+void s21_set_decimal_scale(s21_decimal *value, int scale);
+void s21_set_decimal_sign(s21_decimal * value, int sign);
+void s21_set_decimal_zero(s21_decimal *value);
+int s21_set_int_bit(int value, int index);
+int s21_binary_compare(s21_decimal value1, s21_decimal value2);
+s21_decimal s21_binary_add(s21_decimal value1, s21_decimal value2);
+s21_big_decimal s21_binary_mult(s21_decimal value1, s21_decimal value2);
 
 #define s21_mask_last_bit 0x00000001
 #define s21_mask_first_bit 0x80000000
