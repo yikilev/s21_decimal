@@ -10,7 +10,7 @@ typedef struct s21_decimal {
 } s21_decimal;
 
 typedef struct s21_big_decimal {
-    int bits[8];
+    s21_decimal decimal[2];
 } s21_big_decimal;
 
 
