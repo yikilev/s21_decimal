@@ -1,4 +1,4 @@
-#include "s21_decimal.h"
+#include "../s21_decimal.h"
 
 s21_decimal s21_get_zero_decimal(void){
     s21_decimal decimal;

@@ -63,7 +63,7 @@ s21_decimal s21_decimal_get_int_min(void);
 int s21_get_sign(s21_decimal value);
 s21_decimal s21_get_zero_decimal(void);
 int s21_reset_int_bit(int value, int index);
-void set_decimal_bit(s21_decimal *value, int index);
+void s21_set_decimal_bit(s21_decimal *value, int index);
 void s21_set_decimal_scale(s21_decimal *value, int scale);
 void s21_set_decimal_sign(s21_decimal * value, int sign);
 void s21_set_decimal_zero(s21_decimal *value);
@@ -71,6 +71,9 @@ int s21_set_int_bit(int value, int index);
 int s21_binary_compare(s21_decimal value1, s21_decimal value2);
 s21_decimal s21_binary_add(s21_decimal value1, s21_decimal value2);
 s21_big_decimal s21_binary_mult(s21_decimal value1, s21_decimal value2);
+void s21_set_decimal_bit_zero(s21_decimal *value, int index);
+s21_decimal s21_binary_not(s21_decimal *value);
+
 
 #define s21_mask_last_bit 0x00000001
 #define s21_mask_first_bit 0x80000000
