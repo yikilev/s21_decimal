@@ -1,6 +1,6 @@
-#include "../s21_decimal.h"
-#include "../helpers/s21_set_decimal_zero.c"
-#include "../helpers/s21_set_decimal_bit.c"
+// #include "../helpers/s21_set_decimal_bit.c"
+// #include "../helpers/s21_set_decimal_zero.c"
+// #include "../s21_decimal.h"
 
 // void s21_set_decimal_zero(s21_decimal *value) {
 //   for (int i = 0; i < 4; i++) {
@@ -13,7 +13,8 @@
 //     value->bits[index / bits_in_byte] |= (1U << (index % bits_in_byte));
 //   }
 // }
-int s21_add_helper(s21_decimal value1, s21_decimal value2, s21_decimal *result, int perenos){
+int s21_add_helper(s21_decimal value1, s21_decimal value2, s21_decimal *result,
+                   int perenos) {
   for (int i = 0; i < 3; i++) {
     unsigned int temp_res = 0x00000000;
     unsigned int pervoe = value1.bits[i];
@@ -63,13 +64,16 @@ s21_decimal s21_binary_add(s21_decimal value1, s21_decimal value2) {
   return result;
 }
 
-s21_big_decimal s21_binary_add_big_decimal(s21_big_decimal value1, s21_big_decimal value2){
+s21_big_decimal s21_binary_add_big_decimal(s21_big_decimal value1,
+                                           s21_big_decimal value2) {
   int perenos = 0;
   s21_big_decimal result;
   s21_set_decimal_zero(&result.decimal[0]);
   s21_set_decimal_zero(&result.decimal[1]);
-  perenos = s21_add_helper(value1.decimal[0], value2.decimal[0], &result.decimal[0], perenos);
-  s21_add_helper(value1.decimal[1], value2.decimal[1], &result.decimal[1], perenos);
+  perenos = s21_add_helper(value1.decimal[0], value2.decimal[0],
+                           &result.decimal[0], perenos);
+  s21_add_helper(value1.decimal[1], value2.decimal[1], &result.decimal[1],
+                 perenos);
   return result;
 }
 
@@ -84,7 +88,7 @@ s21_big_decimal s21_binary_add_big_decimal(s21_big_decimal value1, s21_big_decim
 //   value1.decimal[1].bits[0] = 0x00000002;
 //   value1.decimal[1].bits[1] = 0x00000000;
 //   value1.decimal[1].bits[2] = 0x00000000;
-//   value1.decimal[1].bits[3] = 0x00000000;
+//   value1.decimal[1].bits[3] = 0x001A0000;
 //   value2.decimal[0].bits[0] = 0x00000009;
 //   value2.decimal[0].bits[1] = 0x00000000;
 //   value2.decimal[0].bits[2] = 0x80000000;
@@ -103,16 +107,17 @@ s21_big_decimal s21_binary_add_big_decimal(s21_big_decimal value1, s21_big_decim
 //   // chislo2.bits[2] = 0xf0000008;
 
 //   s21_big_decimal result = s21_binary_add_big_decimal(value1, value2);
-//   printf("Результат: %u  %x\n", result.decimal[0].bits[0], result.decimal[0].bits[0]);
-//   printf("Результат: %u  %x\n", result.decimal[0].bits[1], result.decimal[0].bits[1]);
-//   printf("Результат: %u  %x\n", result.decimal[0].bits[2], result.decimal[0].bits[2]);
-//   printf("Результат: %u  %x\n", result.decimal[0].bits[3], result.decimal[0].bits[3]);
-//   printf("Результат: %u  %x\n", result.decimal[1].bits[0], result.decimal[1].bits[0]);
-//   printf("Результат: %u  %x\n", result.decimal[1].bits[1], result.decimal[1].bits[1]);
-//   printf("Результат: %u  %x\n", result.decimal[1].bits[2], result.decimal[1].bits[2]);
-//   printf("Результат: %u  %x\n", result.decimal[1].bits[3], result.decimal[1].bits[3]);
-
-
+//   printf("Результат: %u  %x\n", result.decimal[0].bits[0],
+//   result.decimal[0].bits[0]); printf("Результат: %u  %x\n",
+//   result.decimal[0].bits[1], result.decimal[0].bits[1]); printf("Результат:
+//   %u  %x\n", result.decimal[0].bits[2], result.decimal[0].bits[2]);
+//   printf("Результат: %u  %x\n", result.decimal[0].bits[3],
+//   result.decimal[0].bits[3]); printf("Результат: %u  %x\n",
+//   result.decimal[1].bits[0], result.decimal[1].bits[0]); printf("Результат:
+//   %u  %x\n", result.decimal[1].bits[1], result.decimal[1].bits[1]);
+//   printf("Результат: %u  %x\n", result.decimal[1].bits[2],
+//   result.decimal[1].bits[2]); printf("Результат: %u  %x\n",
+//   result.decimal[1].bits[3], result.decimal[1].bits[3]);
 
 //   return 0;
 // }
