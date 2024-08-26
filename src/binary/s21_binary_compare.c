@@ -1,6 +1,6 @@
-#include "../helpers/s21_bit_is_set.c"
-#include "../helpers/s21_set_decimal_zero.c"
-#include "../s21_decimal.h"
+// #include "../helpers/s21_bit_is_set.c"
+// #include "../helpers/s21_set_decimal_zero.c"
+// #include "../s21_decimal.h"
 
 int s21_binary_compare(s21_decimal value1, s21_decimal value2) {
   int code = 0;

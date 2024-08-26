@@ -1,5 +1,5 @@
-#include "../helpers/s21_get_zero_decimal.c"
-#include "../s21_decimal.h"
+// #include "../helpers/s21_get_zero_decimal.c"
+// #include "../s21_decimal.h"
 #include "./s21_binary_add.c"
 #include "./s21_binary_not.c"
 s21_decimal s21_binary_sub(s21_decimal value1, s21_decimal value2) {
