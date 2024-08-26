@@ -12,8 +12,8 @@ s21_decimal s21_binary_sub(s21_decimal value1, s21_decimal value2) {
 }
 
 // int main () {
-//     s21_decimal value1 = {0x0,0x1,0x0,0x0};
-//     s21_decimal value2 = {0x1,0x0,0x0,0x0};
+//     s21_decimal value1 = {0x13,0x0,0x0,0x0};
+//     s21_decimal value2 = {0x10,0x0,0x0,0x0};
 //     s21_decimal result = s21_binary_sub(value1,value2);
 //     printf("bit0: %u %x\n", result.bits[0], result.bits[0]);
 //     printf("bit1: %u %x\n", result.bits[1], result.bits[1]);

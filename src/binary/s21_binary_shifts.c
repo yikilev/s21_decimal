@@ -90,46 +90,46 @@ s21_big_decimal s21_int256_binary_shift_left(s21_big_decimal decimal, int shift)
     return result;
 }
 
-int main() {
-//   s21_decimal value1;
+// int main() {
+// //   s21_decimal value1;
 
-//   value1.bits[0] = 0x80000001;
-//   value1.bits[1] = 0x80000004;
-//   value1.bits[2] = 0x00000003;
-//   value1.bits[3] = 0x00000000;
+// //   value1.bits[0] = 0x80000001;
+// //   value1.bits[1] = 0x80000004;
+// //   value1.bits[2] = 0x00000003;
+// //   value1.bits[3] = 0x00000000;
  
 
-//   s21_decimal result = s21_int128_binary_shift_left(value1, 2);
-//   printf("Results: %d %d %d %d\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
-//   printf("Results: %x %x %x %x\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
+// //   s21_decimal result = s21_int128_binary_shift_left(value1, 2);
+// //   printf("Results: %d %d %d %d\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
+// //   printf("Results: %x %x %x %x\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
   
-  s21_big_decimal value1;
+//   s21_big_decimal value1;
 
-  value1.decimal[0].bits[0] = 0x00000005;
-  value1.decimal[0].bits[1] = 0x00000000;
-  value1.decimal[0].bits[2] = 0x80000000;
-  value1.decimal[0].bits[3] = 0x00000000;
+//   value1.decimal[0].bits[0] = 0x00000005;
+//   value1.decimal[0].bits[1] = 0x00000000;
+//   value1.decimal[0].bits[2] = 0x80000000;
+//   value1.decimal[0].bits[3] = 0x00000000;
 
-  value1.decimal[1].bits[0] = 0x00000000;
-  value1.decimal[1].bits[1] = 0x70000000;
-  value1.decimal[1].bits[2] = 0x00000000;
-  value1.decimal[1].bits[3] = 0x00000000;
+//   value1.decimal[1].bits[0] = 0x00000000;
+//   value1.decimal[1].bits[1] = 0x70000000;
+//   value1.decimal[1].bits[2] = 0x00000000;
+//   value1.decimal[1].bits[3] = 0x00000000;
  
 
-  s21_big_decimal result = s21_int256_binary_shift_left(value1, 1);
-  printf("Results: %u %x \n", result.decimal[0].bits[0], result.decimal[0].bits[0]);
-  printf("Results: %u %x \n", result.decimal[0].bits[1], result.decimal[0].bits[1]);
-  printf("Results: %u %x \n", result.decimal[0].bits[2], result.decimal[0].bits[2]);
-  printf("Results: %u %x \n", result.decimal[0].bits[3], result.decimal[0].bits[3]);
-  printf("Results: %u %x \n", result.decimal[1].bits[0], result.decimal[1].bits[0]);
-  printf("Results: %u %x \n", result.decimal[1].bits[1], result.decimal[1].bits[1]);
-  printf("Results: %u %x \n", result.decimal[1].bits[2], result.decimal[1].bits[2]);
-  printf("Results: %u %x \n", result.decimal[1].bits[3], result.decimal[1].bits[3]);
+//   s21_big_decimal result = s21_int256_binary_shift_left(value1, 1);
+//   printf("Results: %u %x \n", result.decimal[0].bits[0], result.decimal[0].bits[0]);
+//   printf("Results: %u %x \n", result.decimal[0].bits[1], result.decimal[0].bits[1]);
+//   printf("Results: %u %x \n", result.decimal[0].bits[2], result.decimal[0].bits[2]);
+//   printf("Results: %u %x \n", result.decimal[0].bits[3], result.decimal[0].bits[3]);
+//   printf("Results: %u %x \n", result.decimal[1].bits[0], result.decimal[1].bits[0]);
+//   printf("Results: %u %x \n", result.decimal[1].bits[1], result.decimal[1].bits[1]);
+//   printf("Results: %u %x \n", result.decimal[1].bits[2], result.decimal[1].bits[2]);
+//   printf("Results: %u %x \n", result.decimal[1].bits[3], result.decimal[1].bits[3]);
 
 
 
-  return 0;
-}
+//   return 0;
+// }
 
 
 
