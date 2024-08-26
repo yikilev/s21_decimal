@@ -57,12 +57,17 @@ int main() {
 //   printf("Results: %d %d %d %d\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
 //   printf("Results: %x %x %x %x\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
   
-  s21_decimal value1;
+  s21_big_decimal value1;
 
-  value1.bits[0] = 0x80000001;
-  value1.bits[1] = 0x80000004;
-  value1.bits[2] = 0x00000003;
-  value1.bits[3] = 0x00000000;
+  value1.decimal[0].bits[0] = 0x00000000;
+  value1.decimal[0].bits[1] = 0x00000000;
+  value1.decimal[0].bits[2] = 0x80000000;
+  value1.decimal[0].bits[3] = 0x00000000;
+
+  value1.decimal[1].bits[0] = 0x00000000;
+  value1.decimal[1].bits[1] = 0x00000000;
+  value1.decimal[1].bits[2] = 0x00000000;
+  value1.decimal[1].bits[3] = 0x00000000;
  
 
   s21_decimal result = s21_int128_binary_shift_left(value1, 2);
