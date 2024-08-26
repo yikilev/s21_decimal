@@ -73,10 +73,16 @@ s21_decimal s21_binary_add(s21_decimal value1, s21_decimal value2);
 s21_big_decimal s21_binary_mult(s21_decimal value1, s21_decimal value2);
 void s21_set_decimal_bit_zero(s21_decimal *value, int index);
 s21_decimal s21_binary_not(s21_decimal *value);
+s21_big_decimal s21_decimal_to_big_decimal(s21_decimal value);
+void s21_set_big_decimal_zero(s21_big_decimal *value);
+s21_big_decimal s21_binary_add_big_decimal(s21_big_decimal value1, s21_big_decimal value2);
+int s21_add_helper(s21_decimal value1, s21_decimal value2, s21_decimal *result, int perenos);
+int s21_is_int_bit_set(int number, int index);
 s21_decimal s21_int128_binary_shift_left_one(s21_decimal decimal);
 s21_decimal s21_int128_binary_shift_left(s21_decimal decimal, int shift);
-int s21_is_int_bit_set(int number, int index);
 s21_big_decimal s21_int256_binary_shift_left(s21_big_decimal decimal, int shift);
+
+
 
 #define s21_mask_last_bit 0x00000001
 #define s21_mask_first_bit 0x80000000
