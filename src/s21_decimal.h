@@ -79,6 +79,7 @@ s21_big_decimal s21_binary_add_big_decimal(s21_big_decimal value1, s21_big_decim
 int s21_add_helper(s21_decimal value1, s21_decimal value2, s21_decimal *result, int perenos);
 int s21_is_int_bit_set(int number, int index);
 s21_decimal s21_int128_binary_shift_left_one(s21_decimal decimal);
+s21_decimal s21_int128_binary_shift_right_one(s21_decimal decimal);
 s21_decimal s21_int128_binary_shift_left(s21_decimal decimal, int shift);
 s21_big_decimal s21_int256_binary_shift_left(s21_big_decimal decimal, int shift);
 
