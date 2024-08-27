@@ -88,18 +88,18 @@ s21_big_decimal s21_int256_binary_shift_right(s21_big_decimal decimal, int shift
     return result;
 }
 
-// int main() {
-// //   s21_decimal value1;
+int main() {
+  s21_decimal value1;
 
-// //   value1.bits[0] = 0x00000000;
-// //   value1.bits[1] = 0x00000007;
-// //   value1.bits[2] = 0x00000000;
-// //   value1.bits[3] = 0x00000000;
+  value1.bits[0] = 0x00000000;
+  value1.bits[1] = 0x00000007;
+  value1.bits[2] = 0x00000000;
+  value1.bits[3] = 0x00000000;
  
 
-// //   s21_decimal result = s21_int128_binary_shift_right_one(value1);
-// //   printf("Results: %u %u %u %u\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
-// //   printf("Results: %x %x %x %x\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
+  s21_decimal result = s21_int128_binary_shift_right(value1, 1);
+  printf("Results: %u %u %u %u\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
+  printf("Results: %x %x %x %x\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
   
 //   s21_big_decimal value1;
 
@@ -129,8 +129,8 @@ s21_big_decimal s21_int256_binary_shift_right(s21_big_decimal decimal, int shift
 
 
 
-//   return 0;
-// }
+  return 0;
+}
 
 
 
@@ -203,4 +203,15 @@ s21_big_decimal s21_int256_binary_shift_right(s21_big_decimal decimal, int shift
 //   printf("value.decimal[1].bits[3] %u %x\n", value.decimal[1].bits[3], value.decimal[1].bits[3]);
 
 //   return 0;
+// }
+
+// int main() {
+//     for (int i = 0; i < 10;){
+//         printf("%d\n", i++);
+//     }
+//         printf("\n");
+
+//     for (int i = 0; i < 10;){
+//         printf("%d\n", ++i);
+//     }
 // }
