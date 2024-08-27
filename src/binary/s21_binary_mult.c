@@ -1,8 +1,8 @@
 // #include "../helpers/s21_set_decimal_zero.c"
-#include "../s21_decimal.h"
+// #include "../s21_decimal.h"
 // #include "./s21_binary_add.c"
 // #include "./s21_binary_shifts.c"
-#include "../helpers/s21_decimal_to_bigdecimal.c"
+// #include "../helpers/s21_decimal_to_big_decimal.c"
 
 s21_big_decimal s21_binary_mult(s21_decimal value0, s21_decimal value2) {
   s21_big_decimal result;

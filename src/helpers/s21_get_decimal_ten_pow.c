@@ -2,7 +2,7 @@
 #include "./s21_get_decimal_ten.c"
 #include "./s21_get_decimal_one.c"
 // #include "../helpers/s21_set_decimal_zero.c"
-#include "../binary/s21_binary_mult.c"
+// #include "../binary/s21_binary_mult.c"
 
 s21_decimal s21_get_decimal_ten_pow(int pow) {
     s21_decimal ten = s21_get_decimal_ten();
