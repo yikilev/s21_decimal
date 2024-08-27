@@ -38,6 +38,11 @@ typedef enum s21_conversion_result {
     S21_CONVERSION_ERROR = 1,
 } s21_conversion_result;
 
+typedef enum s21_other_result {
+    S21_OTHER_OK = 0,
+    S21_OTHER_ERROR = 1,
+} s21_other_result;
+
 typedef struct s21_decimal_256 {
     s21_decimal decimals[2];
 } s21_decimal_256;
@@ -82,8 +87,11 @@ s21_decimal s21_int128_binary_shift_left_one(s21_decimal decimal);
 s21_decimal s21_int128_binary_shift_right_one(s21_decimal decimal);
 s21_decimal s21_int128_binary_shift_left(s21_decimal decimal, int shift);
 s21_big_decimal s21_int256_binary_shift_left(s21_big_decimal decimal, int shift);
-
-
+s21_decimal s21_decimal_get_inf(void);
+s21_decimal s21_get_decimal_ten(void);
+s21_decimal s21_get_decimal_one(void);
+s21_decimal s21_get_decimal_ten_pow(int pow);
+int s21_truncate(s21_decimal value, s21_decimal *result);
 
 #define s21_mask_last_bit 0x00000001
 #define s21_mask_first_bit 0x80000000
