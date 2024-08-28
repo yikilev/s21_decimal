@@ -1,4 +1,4 @@
-#include "../s21_decimal.h"
+#include "s21_decimal.h"
 
 void s21_set_decimal_sign(s21_decimal * value, int sign) {
     if (sign == 1) value->bits[3] |= s21_minus;

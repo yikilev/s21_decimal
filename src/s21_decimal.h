@@ -95,7 +95,9 @@ int s21_truncate(s21_decimal value, s21_decimal *result);
 s21_decimal s21_int128_binary_shift_right(s21_decimal decimal, int shift);
 s21_big_decimal s21_int256_binary_shift_right(s21_big_decimal decimal, int shift);
 s21_decimal s21_remove_insignificant_zeros(s21_decimal value);
-int s21_decimal_is_equal_zero(s21_decimal value)
+int s21_decimal_is_equal_zero(s21_decimal value);
+int s21_decimal_is_zero(s21_decimal value);
+
 
 #define s21_mask_last_bit 0x00000001
 #define s21_mask_first_bit 0x80000000
