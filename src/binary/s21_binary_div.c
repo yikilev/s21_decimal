@@ -150,69 +150,69 @@ s21_big_decimal s21_binary_div_big_decimal(s21_big_decimal decimal1,
   return result;
 }
 
-int main() {
-  s21_big_decimal value1;
-  s21_big_decimal value2;
-  s21_big_decimal remainder;
-  remainder.decimal[0] = s21_get_zero_decimal();
-  remainder.decimal[1] = s21_get_zero_decimal();
+// int main() {
+//   s21_big_decimal value1;
+//   s21_big_decimal value2;
+//   s21_big_decimal remainder;
+//   remainder.decimal[0] = s21_get_zero_decimal();
+//   remainder.decimal[1] = s21_get_zero_decimal();
 
-  value1.decimal[0].bits[0] = 0x00000000;
-  value1.decimal[0].bits[1] = 0x00000000;
-  value1.decimal[0].bits[2] = 0x00000000;
-  value1.decimal[0].bits[3] = 0x00000000;
-  value1.decimal[1].bits[0] = 0x00000003;
-  value1.decimal[1].bits[1] = 0x00000000;
-  value1.decimal[1].bits[2] = 0x00000000;
-  value1.decimal[1].bits[3] = 0x00000000;
+//   value1.decimal[0].bits[0] = 0x00000000;
+//   value1.decimal[0].bits[1] = 0x00000000;
+//   value1.decimal[0].bits[2] = 0x00000000;
+//   value1.decimal[0].bits[3] = 0x00000000;
+//   value1.decimal[1].bits[0] = 0x00000003;
+//   value1.decimal[1].bits[1] = 0x00000000;
+//   value1.decimal[1].bits[2] = 0x00000000;
+//   value1.decimal[1].bits[3] = 0x00000000;
 
-  value2.decimal[0].bits[0] = 0x00000002;
-  value2.decimal[0].bits[1] = 0x00000000;
-  value2.decimal[0].bits[2] = 0x00000000;
-  value2.decimal[0].bits[3] = 0x00000000;
-  value2.decimal[1].bits[0] = 0x00000000;
-  value2.decimal[1].bits[1] = 0x00000000;
-  value2.decimal[1].bits[2] = 0x00000000;
-  value2.decimal[1].bits[3] = 0x00000000;
+//   value2.decimal[0].bits[0] = 0x00000002;
+//   value2.decimal[0].bits[1] = 0x00000000;
+//   value2.decimal[0].bits[2] = 0x00000000;
+//   value2.decimal[0].bits[3] = 0x00000000;
+//   value2.decimal[1].bits[0] = 0x00000000;
+//   value2.decimal[1].bits[1] = 0x00000000;
+//   value2.decimal[1].bits[2] = 0x00000000;
+//   value2.decimal[1].bits[3] = 0x00000000;
 
-  s21_big_decimal result =
-      s21_binary_div_big_decimal(value1, value2, &remainder);
+//   s21_big_decimal result =
+//       s21_binary_div_big_decimal(value1, value2, &remainder);
 
-  printf("result: %u %x\n", result.decimal[0].bits[0],
-         result.decimal[0].bits[0]);
-  printf("result: %u %x\n", result.decimal[0].bits[1],
-         result.decimal[0].bits[1]);
-  printf("result: %u %x\n", result.decimal[0].bits[2],
-         result.decimal[0].bits[2]);
-  printf("result: %u %x\n", result.decimal[0].bits[3],
-         result.decimal[0].bits[3]);
-  printf("result: %u %x\n", result.decimal[1].bits[0],
-         result.decimal[1].bits[0]);
-  printf("result: %u %x\n", result.decimal[1].bits[1],
-         result.decimal[1].bits[1]);
-  printf("result: %u %x\n", result.decimal[1].bits[2],
-         result.decimal[1].bits[2]);
-  printf("result: %u %x\n", result.decimal[1].bits[3],
-         result.decimal[1].bits[3]);
+//   printf("result: %u %x\n", result.decimal[0].bits[0],
+//          result.decimal[0].bits[0]);
+//   printf("result: %u %x\n", result.decimal[0].bits[1],
+//          result.decimal[0].bits[1]);
+//   printf("result: %u %x\n", result.decimal[0].bits[2],
+//          result.decimal[0].bits[2]);
+//   printf("result: %u %x\n", result.decimal[0].bits[3],
+//          result.decimal[0].bits[3]);
+//   printf("result: %u %x\n", result.decimal[1].bits[0],
+//          result.decimal[1].bits[0]);
+//   printf("result: %u %x\n", result.decimal[1].bits[1],
+//          result.decimal[1].bits[1]);
+//   printf("result: %u %x\n", result.decimal[1].bits[2],
+//          result.decimal[1].bits[2]);
+//   printf("result: %u %x\n", result.decimal[1].bits[3],
+//          result.decimal[1].bits[3]);
 
-  printf("------------------------------\n");
+//   printf("------------------------------\n");
 
-  printf("remainder: %u %x\n", remainder.decimal[0].bits[0],
-         remainder.decimal[0].bits[0]);
-  printf("remainder: %u %x\n", remainder.decimal[0].bits[1],
-         remainder.decimal[0].bits[1]);
-  printf("remainder: %u %x\n", remainder.decimal[0].bits[2],
-         remainder.decimal[0].bits[2]);
-  printf("remainder: %u %x\n", remainder.decimal[0].bits[3],
-         remainder.decimal[0].bits[3]);
-  printf("remainder: %u %x\n", remainder.decimal[1].bits[0],
-         remainder.decimal[1].bits[0]);
-  printf("remainder: %u %x\n", remainder.decimal[1].bits[1],
-         remainder.decimal[1].bits[1]);
-  printf("remainder: %u %x\n", remainder.decimal[1].bits[2],
-         remainder.decimal[1].bits[2]);
-  printf("remainder: %u %x\n", remainder.decimal[1].bits[3],
-         remainder.decimal[1].bits[3]);
+//   printf("remainder: %u %x\n", remainder.decimal[0].bits[0],
+//          remainder.decimal[0].bits[0]);
+//   printf("remainder: %u %x\n", remainder.decimal[0].bits[1],
+//          remainder.decimal[0].bits[1]);
+//   printf("remainder: %u %x\n", remainder.decimal[0].bits[2],
+//          remainder.decimal[0].bits[2]);
+//   printf("remainder: %u %x\n", remainder.decimal[0].bits[3],
+//          remainder.decimal[0].bits[3]);
+//   printf("remainder: %u %x\n", remainder.decimal[1].bits[0],
+//          remainder.decimal[1].bits[0]);
+//   printf("remainder: %u %x\n", remainder.decimal[1].bits[1],
+//          remainder.decimal[1].bits[1]);
+//   printf("remainder: %u %x\n", remainder.decimal[1].bits[2],
+//          remainder.decimal[1].bits[2]);
+//   printf("remainder: %u %x\n", remainder.decimal[1].bits[3],
+//          remainder.decimal[1].bits[3]);
 
-  return 0;
-}
+//   return 0;
+// }

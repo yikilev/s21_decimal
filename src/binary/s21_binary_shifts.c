@@ -1,8 +1,8 @@
 // #include "../s21_decimal.h"
-#include "../helpers/s21_set_int_bit.c"
+// #include "../helpers/s21_set_int_bit.c"
 // #include "../helpers/s21_get_zero_decimal.c"
 // #include "../helpers/s21_set_decimal_zero.c"
-#include "../helpers/s21_is_int_bit_set.c"
+// #include "../helpers/s21_is_int_bit_set.c"
 // #include "../helpers/s21_bit_is_set.c"
 // #include "../helpers/s21_set_decimal_bit.c"
 

@@ -9,3 +9,12 @@ int s21_scale_big_decimal_to_decimal(s21_big_decimal value){
     s21_decimal max_decimal = s21_get_max_decimal();
     
 }
+
+int s21_max(int value1, int value2) {
+    int result = value2;
+    if (value1 > value2) {
+        result = value1;
+    }
+
+    return result;
+}

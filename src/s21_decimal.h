@@ -43,6 +43,11 @@ typedef enum s21_other_result {
     S21_OTHER_ERROR = 1,
 } s21_other_result;
 
+typedef enum s21_comparison_result {
+    S21_COMPARISON_OK = 1,
+    S21_COMPARISON_ERROR = 0,
+} s21_comparison_result;
+
 typedef struct s21_decimal_256 {
     s21_decimal decimals[2];
 } s21_decimal_256;
@@ -97,7 +102,10 @@ s21_big_decimal s21_int256_binary_shift_right(s21_big_decimal decimal, int shift
 s21_decimal s21_remove_insignificant_zeros(s21_decimal value);
 int s21_decimal_is_equal_zero(s21_decimal value);
 int s21_decimal_is_zero(s21_decimal value);
-
+int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+s21_decimal s21_abs(s21_decimal value);
+int s21_is_greater(s21_decimal value1, s21_decimal value2);
+int s21_is_less(s21_decimal value1, s21_decimal value2);
 
 #define s21_mask_last_bit 0x00000001
 #define s21_mask_first_bit 0x80000000

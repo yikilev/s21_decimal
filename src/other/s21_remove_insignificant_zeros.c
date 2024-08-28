@@ -1,11 +1,18 @@
-// #include "../s21_decimal.h"
+#include "../s21_decimal.h"
 #include "../binary/s21_binary_div.c"
+#include "../helpers/s21_set_decimal_sign.c"
+#include "../helpers/s21_set_decimal_scale.c"
+#include "../helpers/s21_get_decimal_ten.c"
+#include "../helpers/s21_get_sign.c"
+#include "../helpers/s21_get_decimal_scale.c"
+#include "../helpers/s21_decimal_is_correct.c"
+#include "../helpers/s21_decimal_is_equal_zero.c"
 
 s21_decimal s21_remove_insignificant_zeros(s21_decimal value) {
     s21_decimal result = value;
     int scale = s21_get_decimal_scale(value);
     int sign = s21_get_sign(value);
-    if (scale > 0 && s21_decimal_is_correct(value)) {
+    if (scale > 0 && !s21_decimal_is_correct(value)) {
         s21_decimal remainder = s21_get_zero_decimal();
         s21_decimal tmp = value;
         while(scale > 0) {
@@ -17,9 +24,10 @@ s21_decimal s21_remove_insignificant_zeros(s21_decimal value) {
                 break;
             }
             s21_set_decimal_scale(&result, scale);
-            s21_decimal_set_sign(&result, sign);
+            s21_set_decimal_sign(&result, sign);
         }
     }
+    return result;
 }
 
 void s21_print_binary_int(int number) {
@@ -36,19 +44,21 @@ void print_decimal(s21_decimal *number) {
 }
 
 
-int main() {
-  s21_decimal value1;
+// int main() {
+//   s21_decimal value1;
 
-  value1.bits[0] = 0x00000005; 
-  value1.bits[1] = 0x00000000;
-  value1.bits[2] = 0x00000000;
-  value1.bits[3] = 0x00000000;
-
-  s21_decimal result;
-  result = s21_remove_insignificant_zeros(value1);
-  print_decimal(&result);
-  printf("\n\nResults: %u %u %u %u\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
-  printf("Results: %x %x %x %x\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
+//   value1.bits[0] = 0x00000032; 
+//   value1.bits[1] = 0x00000000;
+//   value1.bits[2] = 0x00000000;
+//   value1.bits[3] = 0x00020000;
+//   s21_decimal result = value1;
+//   printf("\n\nResults: %u %u %u %u\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
+//   printf("Results: %x %x %x %x\n\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
+//   print_decimal(&result);
+//   result = s21_remove_insignificant_zeros(value1);
+//   printf("\n\nResults: %u %u %u %u\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
+//   printf("Results: %x %x %x %x\n", result.bits[3], result.bits[2], result.bits[1], result.bits[0]);
+//   print_decimal(&result);
   
-  return 0;
-}
+//   return 0;
+// }

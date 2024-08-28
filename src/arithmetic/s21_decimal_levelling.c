@@ -1,14 +1,14 @@
 #include "../s21_decimal.h"
 #include "../binary/s21_binary_mult.c"
-#include "../binary/s21_binary_add.c"
-#include "../binary/s21_binary_shifts.c"
-#include "../helpers/s21_get_decimal_scale.c"
-#include "../helpers/s21_decimal_to_big_decimal.c"
-#include "../helpers/s21_get_decimal_ten_pow.c"
-#include "../helpers/s21_set_decimal_zero.c"
-#include "../helpers/s21_bit_is_set.c"
-#include "../helpers/s21_get_zero_decimal.c"
-#include "../helpers/s21_set_decimal_bit.c"
+// #include "../binary/s21_binary_add.c"
+// #include "../binary/s21_binary_shifts.c"
+// #include "../helpers/s21_get_decimal_scale.c"
+// #include "../helpers/s21_decimal_to_big_decimal.c"
+// #include "../helpers/s21_get_decimal_ten_pow.c"
+// #include "../helpers/s21_set_decimal_zero.c"
+// #include "../helpers/s21_bit_is_set.c"
+// #include "../helpers/s21_get_zero_decimal.c"
+// #include "../helpers/s21_set_decimal_bit.c"
 
 void s21_decimal_levelling(s21_decimal value1, s21_decimal value2, s21_big_decimal *result1, s21_big_decimal *result2){
     int scale1 = s21_get_decimal_scale(value1);
