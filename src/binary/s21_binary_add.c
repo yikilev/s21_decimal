@@ -13,8 +13,7 @@
 //     value->bits[index / bits_in_byte] |= (1U << (index % bits_in_byte));
 //   }
 // }
-int s21_add_helper(s21_decimal value1, s21_decimal value2, s21_decimal *result,
-                   int perenos) {
+int s21_add_helper(s21_decimal value1, s21_decimal value2, s21_decimal *result, int perenos) {
   for (int i = 0; i < 3; i++) {
     unsigned int temp_res = 0x00000000;
     unsigned int pervoe = value1.bits[i];
